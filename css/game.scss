@@ -1,0 +1,179 @@
+@font-face {
+  font-family: apercu;
+  src: url('../fonts/apercu_regular_pro.otf')
+}
+
+@font-face {
+  font-family: gotham;
+  src: url('../fonts/gotham-b.ttf')
+}
+
+
+body {
+  background-color: #ECF0F1;
+  .hide {
+    display: none;
+  }
+  .separator {
+    background-color: green;
+    position: relative;
+    left: -1em;
+    height: 0.05em;
+    opacity: 0.5
+  }
+  .modal-backdrop {
+    position: fixed;
+    z-index: 3;
+    height: 100%;
+    top: -5em;
+    width: 100%;
+    background-color: rgba(242, 243, 244, 0.7);
+    padding-top: 10em;
+    .modal-main{
+      margin: 0 auto;
+      background-color: white;
+      border-radius: 5px;
+      text-align: center;
+      height: 15em;
+      width: 40%;
+      padding-top: 40px;
+      .assessment {
+        font-family: 'gotham';
+        font-size: 26px;
+        color: #2E2D2E;
+      }
+      .display-result {
+        font-size: 16px;
+        color: #CACFD2;
+        font-family: 'apercu';
+        #user-score {
+          font-weight:bold;
+          color: #58D68D;
+        }
+        #base-score {
+          font-weight:bold;
+          color: #626567;
+        }
+      }
+      .answers {
+        position: relative;
+        bottom: -2em;
+        font-family: 'apercu';
+        font-size: 11px;
+        color: #979A9A;
+        opacity: 0.3;
+        &:hover {
+          opacity: 1;
+        }
+      }
+      .close-btn {
+        font-family: 'apercu';
+        color: #979A9A;
+        font-size: 13px;
+        #close {
+          text-decoration: underline;
+          color: #76D7C4;
+          &:hover {
+            cursor: pointer;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+  .main-form-holder {
+    width: 35em;
+    background-color: white;
+    margin: 0 auto;
+    padding: 1.6em 0 5em 3em;
+    margin-top: 5em;
+
+
+    label {
+      display: block;
+      font-size: 14px;
+      color: #979A9A;
+      font-family: 'apercu'
+    }
+    input {
+      display: inline;
+      margin-bottom: 1em
+    }
+  }
+
+  .question {
+    h6 {
+      font-family: 'apercu';
+      font-size: 15px;
+      height: 0.3em;
+      color: #323332;
+    }
+  }
+
+  .next-button {
+    color: #B3B6B7;
+    font-size: 13px !important;
+    font-family: 'apercu';
+    position: relative;
+    border: none;
+    bottom: -1em;
+  }
+
+
+  .next-buttona {
+    color: #76D7C4!important;
+    font-size: 13px !important;
+    font-family: 'apercu';
+    position: relative;
+    border: none;
+    bottom: -1em;
+    &:hover{
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    &:active {
+      decoration: none !important;
+    }
+  }
+  .clicker {
+    width:6em;
+    height: 3em;
+    background-color: #48C9B0;
+    color: white;
+    text-align: center;
+    border-radius: 3px;
+    padding-top: 1px;
+    float: right;
+    margin-right: 2em;
+    &:hover{
+      cursor: pointer;
+      background-color: darken(#48C9B0, 3%);
+    }
+    p {
+      font-size: 15px;
+      font-weight:bold;
+      font-family: 'apercu'
+    }
+  }
+
+  header {
+    background-color: white;
+    height: 50px;
+    width: 100%;
+    margin-top: -4.79em;
+    position: fixed;
+    nav {
+      background-color: white;
+      width: 100%;
+      text-align: center;
+      padding-top: 7px;
+      p {
+        font-family: 'gotham';
+        color: #626567;
+        font-size: 13px;
+      }
+    }
+  }
+
+
+}

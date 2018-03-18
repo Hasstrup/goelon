@@ -1,0 +1,90 @@
+@font-face {
+  font-family: apercu;
+  src: url("../fonts/apercu_regular_pro.otf"); }
+
+@font-face {
+  font-family: gotham;
+  src: url("../fonts/gotham-b.ttf"); }
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0; }
+  25% {
+    opacity: 0.25; }
+  50% {
+    opacity: 0.5; }
+  75% {
+    opacity: 0.75; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fade {
+  0% {
+    opacity: 0; }
+  25% {
+    opacity: 0.25; }
+  50% {
+    opacity: 0.5; }
+  75% {
+    opacity: 0.75; }
+  100% {
+    opacity: 1; } }
+
+body {
+  background-color: #FBFCFC; }
+  body .main-welcome {
+    background-color: white;
+    border-radius: 4px;
+    width: 25em;
+    height: 15em;
+    margin: 0 auto;
+    position: relative;
+    bottom: -8em;
+    padding: 2% 5% 0 5%;
+    -webkit-box-shadow: 0 0 5px 5px #F0F3F4;
+    box-shadow: 0 0 5px 5px #F0F3F4;
+    text-align: center; }
+    body .main-welcome .title-text {
+      font-family: 'gotham';
+      font-size: 24px;
+      color: #424949; }
+    body .main-welcome .caption-button {
+      font-family: 'apercu';
+      font-size: 13px;
+      color: #979A9A; }
+    body .main-welcome .blinking-button {
+      font-family: 'apercu';
+      font-size: 11px;
+      color: #D0D3D4;
+      -webkit-animation-name: fade;
+      animation-name: fade;
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite; }
+    body .main-welcome .clicker {
+      width: 6em;
+      height: 2.5em;
+      background-color: #48C9B0;
+      color: white;
+      text-align: center;
+      border-radius: 3px;
+      padding-top: 10px;
+      margin: 0 auto; }
+      body .main-welcome .clicker:hover {
+        cursor: pointer;
+        background-color: #3cc6ab; }
+      body .main-welcome .clicker a {
+        font-size: 15px;
+        font-weight: bold;
+        font-family: 'apercu';
+        text-decoration: none;
+        color: white; }
+
+header {
+  background-color: white;
+  height: 40px;
+  width: 100%; }
+  header nav {
+    background-color: white;
+    width: 100%; }

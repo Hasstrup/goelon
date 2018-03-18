@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <title> Main Quiz </title>
+     <link  href='css/game.css' type='text/css' rel='stylesheet'/>
+
+  </head>
+  <body>
+<!-- Hmmmm  is this necessary hasstrup? -->
+    <div class='modal-backdrop hide'>
+        <div class='modal-main'>
+          <p class='assessment'> Maybe a little better </p>
+          <p class='display-result'> You scored <span id="user-score"> 10 </span> points out of <span id="base-score"> 10 </span></p>
+          <p class='close-btn'> <span id='elons-message'> Lol c'mon man. </span>   <span id='close'> Try again </span></p>
+          <p class='answers'> answers: <span id='answers-list'> A B B B A C C D D B </span></p>
+        </div>
+    </div>
+
+    <header>
+      <nav>
+        <p> <span id='hrs'>00</span> hrs : <span id='mins'>00</span> mins : <span id='secs'>00</span> secs </p>
+      </nav>
+    </header>
+
+      <div class="main-form-holder">
+        <hr class='separator'/>
+
+        <div class='question' id='dom1'>
+           <h6> <span> 1. </span>The founder of Tesla Motors </h6>
+           <label> <input class='input-field' name='input1' value='A' type='radio'/> Martin Ebenhard </label>
+           <label> <input class='input-field' name='input1' value='B' type='radio' /> Kimbal Musk </label>
+           <label> <input class='input-field' name='input1' value='C' type='radio' /> Gavin Andresen </label>
+           <label><input class='input-field' class='input-field' name='input1' value='D' type='radio' /> Elon Musk </label>
+           <label> <input class='input-field' name='input1' value='E' type='radio' /> Satoshi Nakamoto </label>
+           <button disabled class="next-button" onclick="shownext(1)" id='but1'> Next </button>
+        </div>
+
+        <div class='question hide' id='dom2'>
+           <h6> <span> 2. </span>Paypal is a merger of which two companies </h6>
+           <label> <input class='input-field' name='input2' value='A' type='radio' /> zip2 and x.com</label>
+           <label><input class='input-field' name='input2' value='B' type='radio' /> x.com and cofinity </label>
+           <label> <input class='input-field' name='input2' value='C' type='radio' /> Tesla and SpaceX </label>
+           <label> <input class='input-field' name='input2' value='D' type='radio' /> Stripe and Paystack</label>
+           <label> <input class='input-field' name='input2' value='E' type='radio' /> Netscape & Ebay </label>
+           <button disabled class="next-button" id='but2' onclick="shownext(2)"> Next </button>
+        </div>
+
+        <div class='question hide' id='dom3'>
+           <h6> <span> 3. </span>SpaceX failed how many times before  deploying a rocket to orbit </h6>
+           <label> <input class='input-field' name='input3' value='A' type='radio' /> 2 </label>
+           <label> <input class='input-field'  name='input3' value='B' type='radio' /> 3</label>
+           <label> <input class='input-field' name='input3' value='C' type='radio' /> 4 </label>
+           <label> <input class='input-field' name='input3' value='D' type='radio' /> 1</label>
+           <label> <input class='input-field' name='input3' value='E' type='radio' /> 5</label>
+           <button disabled class="next-button" id="but3" onclick="shownext(3)"> Next </button>
+        </div>
+
+        <div class='question hide' id='dom4'>
+           <h6> <span> 4. </span> Kimbal Musk runs a company called </h6>
+           <label> <input class='input-field' name='input4' value='A' type='radio' /> Solar Nation </label>
+           <label>  <input class='input-field' name='input4' value='B' type='radio' /> The Big Green</label>
+           <label> <input class='input-field' name='input4' value='C' type='radio' /> Hyperloop </label>
+           <label> <input class='input-field' name='input4' value='D' type='radio' /> The Washington Post </label>
+           <label> <input class='input-field' name='input4' value='E' type='radio' /> Kandela </label>
+           <button  disabled class="next-button" id='but4' onclick="shownext(4)"> Next </button>
+        </div>
+
+        <div class='question hide' id='dom5'>
+           <h6>  <span> 5. </span> Ebay acquired Paypal for how much? (in dollars)</h6>
+           <label><input class='input-field'  name='input5' value='A' type='radio' /> 1.08Bn </label>
+           <label> <input class='input-field' name='input5' value='B' type='radio' /> 1.05Bn </label>
+           <label>  <input class='input-field'name='input5' value='C' type='radio' /> 1.04Bn</label>
+           <label>  <input class='input-field'name='input5' value='D' type='radio' /> 1.03Bn </label>
+           <label> <input class='input-field' name='input5' value='E' type='radio' /> 1.06Bn</label>
+           <button disabled class="next-button" id='but5' onclick="shownext(5)"> Next </button>
+        </div>
+
+        <div class='question hide' id='dom6'>
+           <h6> <span> 6. </span>Elon's mom </h6>
+           <label>  <input class='input-field'name='input6' value='A' type='radio' /> Toca Musk </label>
+           <label> <input class='input-field' name='input6' value='B' type='radio' /> Justine Musk </label>
+           <label> <input class='input-field' name='input6' value='C' type='radio' /> Maye Musk </label>
+           <label> <input class='input-field' name='input6' value='D' type='radio' /> Jorja Smith</label>
+           <label> <input class='input-field' name='input6' value='E' type='radio' onclick='shownext(6)'/> Melo Musk</label>
+
+           <button disabled class="next-button" id='but6' onclick="shownext(6)"> Next </button>
+        </div>
+
+        <div class='question hide' id='dom7'>
+           <h6> <span> 7. </span>Elon is famously inspired by one of the following </h6>
+           <label> <input class='input-field' name='input7' value='A' type='radio' /> Bob Dylan </label>
+           <label> <input class='input-field' name='input7' value='B' type='radio' /> Jimi Hendrixx</label>
+           <label> <input class='input-field' name='input7' value='C' type='radio' /> Kanye West <span> (** who is also the GOAT)</span> </label>
+           <label>  <input class='input-field'name='input7' value='D' type='radio' /> Elvis Priestley</label>
+           <label> <input class='input-field' name='input7' value='E' type='radio' /> Gill Scott-Heron </label>
+           <button disabled class="next-button" id='but7' onclick="shownext(7)"> Next </button>
+        </div>
+
+        <div class='question hide' id='dom8'>
+           <h6> <span> 8. </span>A dummy space suit currently sojourning through space in elon's roadster </h6>
+           <label> <input class='input-field' name='input8' value='A' type='radio' /> Starboy</label>
+           <label> <input class='input-field' name='input8' value='B' type='radio' /> Space Explorer </label>
+           <label> <input class='input-field' name='input8' value='C' type='radio' /> Stardummy </label>
+           <label> <input class='input-field' name='input8' value='D' type='radio' /> Starman </label>
+           <label> <input class='input-field' name='input8' value='E' type='radio' /> Hans Solo </label>
+           <button disabled class="next-button" id='but8' onclick="shownext(8)"> Next </button>
+        </div>
+
+        <div class='question hide' id='dom9' disabled>
+           <h6> <span> 9. </span>The largest rocket ever flown to orbit (courtesy SpaceX)</h6>
+           <label> <input class='input-field' name='input9' value='A' type='radio' /> Falcon X </label>
+           <label> <input class='input-field'  name='input9' value='B' type='radio' /> Falcon Mini </label>
+           <label> <input class='input-field' name='input9' value='C' type='radio' /> Falcon Xtra-Large</label>
+           <label> <input class='input-field' name='input9' value='D' type='radio' /> Falcon Heavy</label>
+           <label> <input class='input-field' name='input9' value='E' type='radio' /> A Really huge rocket </label>
+
+           <button disabled class="next-button" id='but9' onclick="shownext(9)"> Next </button>
+        </div>
+
+        <div class='question hide' id='dom10'>
+           <h6> <span> 10. </span>One of the following is written on one of SpaceX's rocket landing pads</h6>
+           <label> <input class='input-field' name='input10' value='A' type='radio' /> Dont sleep off, boy! </label>
+           <label> <input class='input-field' name='input10' value='B' type='radio' /> Just read the instructions</label>
+           <label> <input class='input-field' name='input10' value='C' type='radio' /> Hasstrup, you're rather boring</label>
+           <label> <input class='input-field' name='input10' value='D' type='radio' /> Farewell, starlite </label>
+           <label> <input class='input-field' name='input10' value='E' type='radio' /> Crash not, my dear</label>
+
+           <button disabled class="next-button" id='but0' onclick="shownext(0)"> Next </button>
+        </div>
+
+        <div class='clicker hide' onclick="submit()">
+          <p> Submit </p>
+        </div>
+      </div>
+      <!-- Script -->
+       <script type='text/javascript' src='js/script.js'></script>
+  </body>
+</html>
